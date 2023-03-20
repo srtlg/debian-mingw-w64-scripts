@@ -1,0 +1,9 @@
+machine = 'x86_64'
+mingw_prefix = f'{machine}-w64-mingw32'
+CMAKE = f'{mingw_prefix}-cmake'
+FORCE_DOWNLOAD = False
+FORCE_BUILD = False
+FORCE_CONFIGURATION = False
+BUILD_ONLY = None  # for debugging the build, set to the package name
+BUILD_TYPE = 'RelWithDebInfo'
+#BUILD_TYPE = 'Debug'
