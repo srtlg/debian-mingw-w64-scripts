@@ -42,14 +42,14 @@ def pkgname(name, dev=False):
 
 
 def lib_dir(root=Path('/')):
-    path = root / f'usr/{defaults.mingw_prefix}/include'
+    path = root / f'usr/{defaults.mingw_prefix}/lib'
     if not path.exists():
         os.makedirs(path)
     return path
 
 
 def include_dir(root=Path('/')):
-    path = root / f'usr/{defaults.mingw_prefix}/lib'
+    path = root / f'usr/{defaults.mingw_prefix}/include'
     if not path.exists():
         os.makedirs(path)
     return path
