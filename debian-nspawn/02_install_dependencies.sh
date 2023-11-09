@@ -10,7 +10,9 @@ ninja-build python3 \
 patch xz-utils sudo pkg-config \
 screen \
 git \
+ca-certificates \
 "
+# maybe export SSL_CERT_FILE=/etc/ssl/certs/ca-certificates.crt?
 systemd-nspawn -D debian-$release sh -c 'update-alternatives --install /usr/bin/python python /usr/bin/python3 1'
 systemd-nspawn -D debian-$release sh -c "echo '$SUDO_USER    ALL=(ALL:ALL) NOPASSWD: ALL'  > /etc/sudoers.d/$SUDO_USER"
 systemd-nspawn -D debian-$release sh -c "apt-get install --no-install-recommends \
